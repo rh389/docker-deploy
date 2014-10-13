@@ -19,5 +19,6 @@ before_install:
  - sudo sh -c "echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list"
  - sudo apt-get -y update
  - sudo apt-get -y install lxc-docker
+ - useradd -G docker $(whoami)
  - groups $(whoami)
  - sudo docker build .
