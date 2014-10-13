@@ -20,5 +20,4 @@ before_install:
  - sudo apt-get -y update
  - sudo apt-get -y install lxc-docker
  - sudo usermod -a -G docker $(whoami)
- - groups $(whoami)
- - sudo docker build .
+ - docker build .
