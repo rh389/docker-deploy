@@ -20,8 +20,8 @@ before_install:
  - sudo apt-get -y update
  - sudo apt-get -y install lxc-docker
  - sudo usermod -a -G docker $(whoami)
- - su -l shippable
  - which docker.io
  - which lxc-docker
  - which docker
+ - exec su -l shippable
  - sudo lxc-docker build .
