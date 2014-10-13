@@ -13,4 +13,6 @@ php:
  - 5.4
 
 before_install:
+ - apt-get -y update
+ - apt-get -y install docker.io && ln -sf /usr/bin/docker.io /usr/local/bun/docker
  - docker build .
