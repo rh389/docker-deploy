@@ -1,3 +1,12 @@
+machine:
+  services:
+    - docker
+
 test:
   override:
     - ./bin/phpspec run
+
+dependencies:
+  pre:
+    - composer install --prefer-dist
+    - docker build -t rh389/docker-test:$CIRCLE_SHA1 .
