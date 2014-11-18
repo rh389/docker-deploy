@@ -1,0 +1,28 @@
+{
+    "name": "rh389/docker-deploy",
+    "description": "Testing Docker-based CI and deployment",
+    "require": {
+        "symfony/console": "~2.5",
+        "symfony/config": "~2.5",
+        "symfony/dependency-injection": "~2.5"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rob Hogan",
+            "email": "rh389@cam.ac.uk"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Hogan": "src"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable"
+}

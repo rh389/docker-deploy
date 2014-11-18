@@ -1,0 +1,3 @@
+services:
+  hogan.symfony_console.command.hello_world_command:
+    class: Hogan\SymfonyConsole\Command\HelloWorldCommand
