@@ -18,6 +18,8 @@ deployment:
   hub:
     branch: master
     commands:
+      - pwd
+      - ls
       - sed "s/<EMAIL>/$DOCKER_EMAIL/;s/<AUTH>/$DOCKER_AUTH/" \
           < .dockercfg.template > ~/.dockercfg
       - docker push rh389/docker-deploy
