@@ -6,7 +6,7 @@ machine:
 
 test:
   override:
-    - docker run --rm rh389/docker-test:$CIRCLE_SHA1 bin/phpspec --format=junit
+    - docker run --rm rh389/docker-test:$CIRCLE_SHA1 bin/phpspec run --format=junit
 
 dependencies:
   pre:
