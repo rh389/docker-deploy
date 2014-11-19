@@ -15,5 +15,5 @@ aws elasticbeanstalk create-application-version --application-name docker-deploy
   --version-label $SHA1 --source-bundle S3Bucket=$EB_BUCKET,S3Key=$DOCKERRUN_FILE --region=eu-west-1
 
 # Update Elastic Beanstalk environment to new version
-aws elasticbeanstalk update-environment --environment-name hello-env \
+aws elasticbeanstalk update-environment --environment-name Default-Environment \
     --version-label $SHA1 --region=eu-west-1
