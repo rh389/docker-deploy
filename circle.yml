@@ -1,12 +1,15 @@
 machine:
+  python:
+      version: 2.7.3
   services:
     - docker
 
 test:
   override:
-    - ./bin/phpspec run
+    - docker run rh389/docker-test:$CIRCLE_SHA1 . --rm bin/phpspec run --format=junit
 
 dependencies:
   pre:
+    - pip install awscli
     - composer install --prefer-dist
     - docker build -t rh389/docker-test:$CIRCLE_SHA1 .
