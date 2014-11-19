@@ -1,8 +1,8 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Authentication": {
-    "Bucket": "my-bucket",
-    "Key": "dockercfg"
+    "Bucket": "elasticbeanstalk-eu-west-1-937007889776",
+    "Key": "AWS AKIAJ7L77AA7Q3JY3WDA:8ROVey2t1E0Tohi9hshwW33LFO1HzSrmHeVX9"
   },
   "Image": {
     "Name": "rh389/docker-deploy:<TAG>",
