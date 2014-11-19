@@ -6,10 +6,18 @@ machine:
 
 test:
   override:
-    - docker run rh389/docker-test:$CIRCLE_SHA1 bin/phpspec run --format=junit
+    - docker run rh389/docker-deploy:$CIRCLE_SHA1 bin/phpspec run --format=junit
 
 dependencies:
   pre:
     - pip install awscli
     - composer install --prefer-dist
-    - docker build -t rh389/docker-test:$CIRCLE_SHA1 .
+    - docker build -t rh389/docker-deploy:$CIRCLE_SHA1 .
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - sed "s/<EMAIL>/$DOCKER_EMAIL/;s/<AUTH>/$DOCKER_AUTH/" \
+          < .dockercfg.template > ~/.dockercfg
+      - docker push rh389/docker-deploy
