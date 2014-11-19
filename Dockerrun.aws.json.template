@@ -1,9 +1,5 @@
 {
   "AWSEBDockerrunVersion": "1",
-  "Authentication": {
-    "Bucket": "elasticbeanstalk-eu-west-1-937007889776",
-    "Key": ".dockercfg"
-  },
   "Image": {
     "Name": "rh389/docker-deploy:<TAG>",
     "Update": "true"
