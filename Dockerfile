@@ -7,4 +7,4 @@ ADD . /var/www
 
 WORKDIR /var/www
 
-CMD php /var/www/app/console dockertest:hello-world
+CMD php -S 0.0.0.0:80 -t web/
